@@ -72,6 +72,159 @@ body {
     width: 100%;
 }
 
+.roomcard-wrap{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #24201d;
+    margin-top: 0;
+    &::after{
+        content: '';
+        clear: both;
+    }
+    &-top{
+        position: relative;
+        width: 100%;
+        background: #2e2a27;
+        height: rem(210);
+    }
+    .common-bt{
+        position: absolute;
+        top: rem(165);
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+    }
+    .top-input{
+        position: absolute;
+        text-align: center;
+        display: block;
+        border: none;
+        width: rem(490);
+        height: rem(100);
+        line-height: rem(100);
+        background: #2e2a27;
+        top: rem(40);
+        left: 50%;
+        transform: translateX(-50%);
+        color: #64605c;
+        font-size: rem(48);
+    }
+    &-main{
+        overflow: hidden;
+        margin-top: rem(80);
+        margin-left: rem(30);
+        margin-right: rem(30);
+        border-top: 1px solid #594837;
+        li{
+            position: relative;
+            width: rem(668);
+            height: rem(170);
+            background: url('../img/page/roomcard-bg.png') no-repeat;
+            background-size: 100% auto;
+            margin-top: rem(35);
+            .rwm-title{
+                position: absolute;
+                top: rem(40);
+                left: rem(205);
+                font-size: rem(52);
+                color: #FFF;
+                &::after{
+                    position: absolute;
+                    content: '￥';
+                    top: rem(0);
+                    left: rem(-20);
+                    font-size: rem(26);
+                }
+            }
+            .rwm-note{
+                position: absolute;
+                top: rem(105);
+                left: rem(205);
+                font-size: rem(24);
+                color: #FFF;
+            }
+        }
+    }
+}
+
+.intergralwrap{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #24201d;
+    .igwrap-top{
+        position: relative;
+        height: rem(300);
+        background-image:-webkit-linear-gradient(90deg, #23160c, #473521); 
+        background-image:linear-gradient(90deg,#23160c,#473521);
+        .common-bt{
+            position: absolute;
+            top: rem(265);
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+        .lt{
+            font-size: rem(22);
+            color: #7d6a5b;
+            margin-top: rem(35);
+        }
+        .lb{
+            font-size: rem(72);
+            color: #e6e0dc;
+        }
+        .left{
+            margin-top: rem(50);
+            height: rem(170);
+            width: 48%;
+            border-right: 1px solid #594837;
+            float: left;
+            text-align: center;
+            .lb{
+                color: #f4b000;
+            }
+        }
+        .right{
+            margin-top: rem(50);
+            height: rem(170);
+            width: 48%;
+            float: left;
+            text-align: center;
+        }
+    }
+    .igwrap-main{
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        .card-list{
+            li{
+                margin-left: rem(20);
+                margin-right: rem(20);
+            }
+        }
+        .igm-title{
+            position: relative;
+            height: rem(120);
+            text-indent: rem(30);
+            font-size: rem(24);
+            color: #706965;
+            line-height: rem(175);
+            background: #24201d;
+        }
+        .img-list{
+            position: relative;
+            width: 100%;
+            min-height: rem(800);
+            background: #2e2a27;
+            &.c404{
+                background: #2e2a27 url('../img/page/log404.png') no-repeat center center;
+                background-size: rem(154) rem(153); 
+            }
+        }
+    }
+}
+
 .pagewrap{
     position: absolute;
     width: 100%;
@@ -191,19 +344,19 @@ body {
                 text-align: center;
                 line-height: rem(45);
                 font-size: rem(22);
-                
+                &.gray{
+                    color: #817a75;
+                    border: rem(2) solid #817a75;
+                }
                 &.done{
-                    content: '支付成功';
                     color: #4a9913;
                     border: rem(2) solid #4a9913;
                 }
                 &.ing{
-                    content: '支付中';
                     color: #e68300;
                     border: rem(2) solid #e68300;
                 }
                 &.tixian{
-                    content: '提现';
                     color: #FFF;
                     border: rem(2) solid #e68300;
                     background: #e68300;
