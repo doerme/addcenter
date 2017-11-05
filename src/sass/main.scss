@@ -1,0 +1,216 @@
+@charset "UTF-8";
+
+$font_size : 75;
+
+@function rem($pixels){
+    @return $pixels / $font_size + rem;
+}
+
+@import "base/base";
+@import "img";
+
+body {
+    font: $b-font-weight #{$b-font-size}/#{$b-line-height} $b-font-family;
+    color: $c-text;
+    a {
+        text-decoration: none;
+        color: nth($c-link, 1);
+        &:hover {
+            text-decoration: underline;
+            color: nth($c-link, 2);
+        }
+    }
+}
+
+.hide{
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.margincenter{
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.mt50{
+    margin-top: rem(50);
+}
+
+.common-bt{
+    display: block;
+    width: rem(340);
+    height: rem(88);
+    text-align: center;
+    line-height: rem(88);
+    font-size: rem(30);
+    color: #FFF;
+    background: url('../img/page/bt-bg.png') no-repeat;
+    background-size: 100% auto; 
+}
+
+.common-bt2{
+    display: block;
+    width: rem(340);
+    height: rem(88);
+    text-align: center;
+    line-height: rem(88);
+    font-size: rem(30);
+    color: #FFF;
+    background: url('../img/page/bt-bg2.png') no-repeat;
+    background-size: 100% auto; 
+}
+
+.load-more-btn {
+    line-height: rem(120);
+    text-align: center;
+    color: #534d49;
+    font-size: rem(24);
+    outline: none;
+    border: none;
+    background: transparent;
+    width: 100%;
+}
+
+.pagewrap{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: rem(60);
+    background: #24201d;
+}
+.formwrap{
+    position: relative;
+    overflow: hidden;
+    &-line{
+        width: 100%;
+        height: rem(110);
+        line-height: rem(110);
+        border-bottom: rem(2) solid #544f4e;
+        &-input{
+            border: none;
+            display: inline-block;
+            width: rem(435);
+            height: rem(100);
+            font-size: rem(32);
+            color: #504c49;
+            text-indent: rem(70);
+            background: #24201d;
+            outline: none;
+            vertical-align: middle;
+            &.tel{
+                background: url('../img/page/form-person.png') no-repeat rem(10) center;
+                background-size: rem(26) rem(29);
+            }
+            &.check{
+                background: url('../img/page/form-shield.png') no-repeat rem(10) center;
+                background-size: rem(31) rem(37);
+            }
+            &.sms{
+                background: url('../img/page/form-checkcode.png') no-repeat rem(10) center;
+                background-size: rem(32) rem(35);
+            }
+            &.pwd{
+                background: url('../img/page/form-lock.png') no-repeat rem(10) center;
+                background-size: rem(29) rem(35);
+            }
+        }
+        &-checkcode{
+            display: inline-block;
+            width: rem(158);
+            height: rem(65);
+            vertical-align: middle;
+        }
+        &-smscode{
+            display: inline-block;
+            font-size: rem(26);
+            color: #e68300;
+            vertical-align: middle;
+            text-align: right;
+        }
+    }
+}
+
+.fans-list {
+    li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #35302c;
+        font-size: rem(24);    
+        color: #504a46;
+        height: rem(125);
+        line-height: rem(125);
+        .left{
+            .avatar{
+                display: inline-block;
+                width: rem(85);
+                height: rem(85);
+                border-radius: 50%;
+                margin-top: rem(20);
+            }
+            .nickname{
+                display: inline-block;
+                font-size: rem(32);
+                color: #FFF;
+                margin-left: rem(20);
+            }
+        }
+    }
+}
+
+
+.card-list {
+    li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #35302c;
+        font-size: rem(24);    
+        color: #504a46;
+        padding-top: rem(10);
+        padding-bottom: rem(10);
+        .left {
+            p:first-child {
+                color: #fff;
+                margin-bottom: rem(2); 
+                font-size: rem(30);
+            }
+        }
+        .count {
+            span {
+                color: #fff;
+                font-size: rem(36);
+                margin-right: rem(18);
+                vertical-align: middle;
+            }
+            .pay-state{
+                display: inline-block;
+                width: rem(110);
+                height: rem(45);
+                text-align: center;
+                line-height: rem(45);
+                font-size: rem(22);
+                
+                &.done{
+                    content: '支付成功';
+                    color: #4a9913;
+                    border: rem(2) solid #4a9913;
+                }
+                &.ing{
+                    content: '支付中';
+                    color: #e68300;
+                    border: rem(2) solid #e68300;
+                }
+                &.tixian{
+                    content: '提现';
+                    color: #FFF;
+                    border: rem(2) solid #e68300;
+                    background: #e68300;
+                }
+            }
+        }
+    }
+}
+
+// Coding...
