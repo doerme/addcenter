@@ -75,7 +75,7 @@ body {
     border: 1px solid #FFF;
     text-align: center;
     font-size: rem(60);
-    top: rem(180);
+    top: rem(65);
     left: rem(100);
     color: #FFF;
     line-height: rem(45);
@@ -89,7 +89,7 @@ body {
     border: 1px solid #FFF;
     text-align: center;
     font-size: rem(60);
-    top: rem(180);
+    top: rem(65);
     right: rem(100);
     color: #FFF;
     line-height: rem(45);
@@ -141,8 +141,9 @@ body {
         top: rem(40);
         left: 50%;
         transform: translateX(-50%);
-        color: #64605c;
+        color: #999;
         font-size: rem(48);
+        font-weight: bold;
     }
     &-main{
         overflow: hidden;
@@ -620,7 +621,7 @@ body {
     }
     .detail-list{
         width: 100%;
-        height: rem(255);
+        height: rem(210);
         display: flex;
         .unit{
             flex: 1;
@@ -646,6 +647,7 @@ body {
                 color: #FFF;
                 font-size: rem(23);
                 text-align: center;
+                padding-top: rem(60); 
             }
             .um{
                 display: block;
@@ -664,8 +666,8 @@ body {
     padding-bottom: rem(20);
     .avatar {
       display: inline-block;
-      width: rem(240);
-      height: rem(240);
+      width: rem(150);
+      height: rem(150);
       box-shadow: 0 0 0 rem(8) #24201d,
                   0 0 0 rem(12) #554e49;
       border-radius: rem(120);
@@ -717,14 +719,16 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin: rem(30) rem(20) 0;
+      margin: rem(10) rem(5) 0;
       padding: 0 rem(30);
       border-radius: rem(10);
       background: #2e2a27;
       height: rem(90);
+      font-size: rem(30);
       .left {
         display: flex;
         align-items: center;
+
         img {
           // vertical-align: middle;
           width: rem(45);
@@ -809,4 +813,45 @@ body {
     }
   }
 
+
+.tips-wrap{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
+    background: #24201d;
+    .tips-icon{
+        position: absolute;
+        width: rem(188);
+        margin-left: rem(-94);
+        top: rem(290);
+        left: 50%;
+    }
+    .tips-note{
+        position: absolute;
+        top: rem(580);
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-size: rem(32);
+        color: #aba6a2;
+    }
+    .tips-bt{
+        position: absolute;
+        left: 50%;
+        width: rem(420);
+        height: rem(96);
+        margin-left: rem(-210);
+        border-radius: rem(20);
+        background: #e68300;
+        text-align: center;
+        line-height: rem(96);
+        font-size: rem(36);
+        color: #fff;
+        top: rem(680);
+    }
+}
 // Coding...

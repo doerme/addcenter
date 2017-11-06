@@ -25,7 +25,7 @@ var app = {
     /** 普通支付 */
     goCommonPay: function(num, type){
         var self = this;
-        util.ajaxPost('/app/user/roomcardOnly',{
+        util.ajaxFun('/app/user/roomcardOnly',{
             count: num,
             pay_way: type
         }).done((jdata)=>{
@@ -41,7 +41,7 @@ var app = {
     /** 套餐支付 */
     goSetPay: function(id, type){
         var self = this;
-        util.ajaxPost('/app/user/roomCardPay',{
+        util.ajaxFun('/app/user/roomCardPay',{
             sp_id: id,
             pay_way: type
         }).done((jdata)=>{
@@ -109,7 +109,8 @@ var app = {
                 tmpval=0;
             }
             tmpval*=1;
-            $('.js-buynum').val(++tmpval);
+            tmpval = tmpval * 1 + 10;
+            $('.js-buynum').val(tmpval);
         })
 
         // 减数量
@@ -119,7 +120,7 @@ var app = {
                 tmpval=0;
             }
             if(tmpval > 0){
-                tmpval--;
+                tmpval-=10;
                 $('.js-buynum').val(tmpval);
             }
         })

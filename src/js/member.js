@@ -12,7 +12,7 @@ var app = {
     },
     /** refresh weichat */
     refreshWechat: function(){
-        window.location.href = '/app/user/refresh';
+        window.location.href = `${/com/.test(window.location.href) ? 'http://gfun.yunshantec.com' : 'http://testddz.tcpan.com'}/app/user/refresh`;
         // util.ajaxFun('/app/user/refresh',{}).done((jdata)=>{
 
         // })
@@ -63,17 +63,17 @@ var app = {
 
         // 去粉丝列表
         $('.js-to-fans').on('click', function(){
-            window.location.href='./fans.html';
+            window.location.href='//gfun.yunshantec.com/app/user/fans';
         })
 
         // 去钱包
         $('.js-to-wallet').on('click', function(){
-            window.location.href='./wallet.html';
+            window.location.href='//gfun.yunshantec.com/app/user/wallet';
         })
 
         // 去积分
         $('.js-to-jifen').on('click', function(){
-            window.location.href='./intergral.html';
+            window.location.href='//gfun.yunshantec.com/app/user/intergral';
         })
     }
 
