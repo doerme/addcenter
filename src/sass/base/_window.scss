@@ -14,6 +14,20 @@
     &.jhm-wrap{
         height: rem(420);
     }
+    &.phonebind{
+        height: rem(520);
+        input.ccf-input{
+            text-align: left;
+            text-indent: rem(20);
+        }
+        .get-sms-code{
+            right: rem(90);
+            top: rem(180);
+            position: absolute;
+            font-size: rem(28);
+            color: #e68300;
+        }
+    }
     .fan-list-wrap{
         width: 100%;
         height: rem(680);

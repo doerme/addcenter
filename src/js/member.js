@@ -2,6 +2,8 @@ import util from './lib/util.js';
 
 var app = {
     mid: '',
+    smsTimer: null,
+    szTimer: null,
     init(){
         var self = this;
         //util.windowToast(1111);
