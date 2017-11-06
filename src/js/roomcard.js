@@ -25,7 +25,7 @@ var app = {
     /** 普通支付 */
     goCommonPay: function(num, type){
         var self = this;
-        util.ajaxFun('/app/user/roomcardOnly',{
+        util.ajaxPost('/app/user/roomcardOnly',{
             count: num,
             pay_way: type
         }).done((jdata)=>{
@@ -41,7 +41,7 @@ var app = {
     /** 套餐支付 */
     goSetPay: function(id, type){
         var self = this;
-        util.ajaxFun('/app/user/roomCardPay',{
+        util.ajaxPost('/app/user/roomCardPay',{
             sp_id: id,
             pay_way: type
         }).done((jdata)=>{

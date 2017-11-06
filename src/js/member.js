@@ -1,6 +1,7 @@
 import util from './lib/util.js';
 
 var app = {
+    mid: '',
     init(){
         var self = this;
         //util.windowToast(1111);
@@ -27,6 +28,7 @@ var app = {
                 $('.js-fans-num').html(jdata.data.fans);
                 $('.js-jb-num').html(jdata.data.JB);
                 $('.js-room-count').html(jdata.data.RC*1);
+                self.mid = jdata.data.mid;
             }
         })
     },
@@ -53,9 +55,9 @@ var app = {
         // })
 
         // 去二维码
-        // $('.js-to-qrcode').on('click', function(){
-        //     window.location.href='qrcode.html';
-        // })
+        $('.js-to-qrcode').on('click', function(){
+            window.location.href='http://testddz.tcpan.com/app/cqrcode?mid=' + self.mid;
+        })
 
         // 去粉丝列表
         $('.js-to-fans').on('click', function(){
