@@ -7,7 +7,7 @@ var app = {
     },
     /** 获取图形验证码 */
     getBillList: function(){
-        util.ajaxFun('/app/user/jbLog',{}).done(function(jdata){            
+        util.ajaxFun('/app/user/jbLogTotal',{}).done(function(jdata){            
             if(jdata.code == 0){
                 $('.js-card-list').html(billlogtpl({
                     data: jdata.data.list

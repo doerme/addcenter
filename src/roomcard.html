@@ -17,24 +17,42 @@
 <body>
     <div class="roomcard-wrap">
         <div class="roomcard-wrap-top">
-            <input class="top-input" type="tel" placeholder="请输入购买门票数" />
-            <div class="common-bt">立即购买门票</div>
+            <input class="top-input js-buynum" type="tel" placeholder="请输入购买门票数" />
+            <div class="common-bt js-buy-single">立即购买门票</div>
+            <div class="num-sub-bt">-</div>
+            <div class="num-add-bt">+</div>
         </div>
         <ul class="roomcard-wrap-main">
-            <li>
-                <div class="rwm-title">3000</div>
-                <div class="rwm-note">4500门票 送4000积分</div>
+            <li class="one" data-id="4" data-pay="300">
+                <div class="rwm-title">300</div>
+                <div class="rwm-note">450门票 送450积分</div>
             </li>
-            <li>
+            <li class="two" data-id="5" data-pay="3000">
                 <div class="rwm-title">3000</div>
-                <div class="rwm-note">4500门票 送4000积分</div>
+                <div class="rwm-note">4500门票 送4500积分</div>
             </li>
-            <li>
-                <div class="rwm-title">3000</div>
-                <div class="rwm-note">4500门票 送4000积分</div>
+            <li data-id="6" data-pay="30000">
+                <div class="rwm-title">30000</div>
+                <div class="rwm-note">90000门票 送90000积分</div>
             </li>
         </ul>
     </div>
+
+    <!-- 选择支付方式 -->
+    <div class="jhm-wrap common-client-wrap js-payway-selected hide">
+        <div class="cc-title">选择支付方式</div>
+        <div class="cc-close js-cc-close">×</div>
+        <div class="cc-pay-way-select">
+            <div class="pay-way-top"></div>
+            <div class="pay-way-bottom">
+                <div class="rest-num">余额<span class="js-my-jb"></span>元</div>
+                <div class="not-enought js-not-enought">钱包余额不足，剩余<span class="js-my-jb"></span></div>
+            </div>
+        </div>
+    </div>
+    <!-- 选择支付方式end -->
+
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script src="./js/roomcard.js"></script>
     
 </body>

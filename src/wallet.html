@@ -21,69 +21,12 @@
         <div class="page-price js-page-price">￥--</div>
         <a class="bt-left yellow js-cz-bt" href="javascript:;">充值</a>
         <a class="bt-right js-tx-bt" href="javascript:;">提现</a>
-        <div class="wallet-list-top">
-            <ul>
-                <li>
-                    <span class="col1">红包</span>
-                    <span class="col2">+4</span>
-                    <a href="javascript:;" class="col3">提现</a>
-                </li>
-                <li>
-                    <span class="col1">红包</span>
-                    <span class="col2">+4</span>
-                    <a href="javascript:;"  class="col3">提现</a>
-                </li>
-                <li>
-                    <span class="col1">红包</span>
-                    <span class="col2">+4</span>
-                    <a href="javascript:;"  class="col3">提现</a>
-                </li>
-            </ul>
+        <div class="wallet-list-top js-wallet-list-top">
+            
         </div>
         <div class="mid-title">红包明细</div>
-        <div class="wallet-list">
-            <ul>
-                <li>
-                    <div class="col1-wrap">
-                        <span class="col1-top">红包</span>
-                        <span class="col1-bottom">2017-10-01 18:22:05</span>
-                    </div>
-                    <span class="col2">+4</span>
-                    <span class="col4 done">已完成</span>
-                </li>
-                <li>
-                    <div class="col1-wrap">
-                        <span class="col1-top">红包</span>
-                        <span class="col1-bottom">2017-10-01 18:22:05</span>
-                    </div>
-                    <span class="col2">+4</span>
-                    <span class="col4 wait">等待中</span>
-                </li>
-                <li>
-                    <div class="col1-wrap">
-                        <span class="col1-top">红包</span>
-                        <span class="col1-bottom">2017-10-01 18:22:05</span>
-                    </div>
-                    <span class="col2">+4</span>
-                    <span class="col4 wait">等待中</span>
-                </li>
-                <li>
-                    <div class="col1-wrap">
-                        <span class="col1-top">红包</span>
-                        <span class="col1-bottom">2017-10-01 18:22:05</span>
-                    </div>
-                    <span class="col2">+4</span>
-                    <span class="col4 wait">等待中</span>
-                </li>
-                <li>
-                    <div class="col1-wrap">
-                        <span class="col1-top">红包</span>
-                        <span class="col1-bottom">2017-10-01 18:22:05</span>
-                    </div>
-                    <span class="col2">+4</span>
-                    <span class="col4 done">已完成</span>
-                </li>
-            </ul>
+        <div class="wallet-list js-wallet-list">
+            
         </div>
     </div>
     <div class="common-bottom">
@@ -101,7 +44,7 @@
         <div class="cc-title">充值</div>
         <div class="cc-form">
             <div class="ccc-value hide">可卖出<span class="js-jb-show"></span></div>
-            <input class="ccf-input js-jiaoyi-num" type="tel" placeholder="输入提现金额" />
+            <input class="ccf-input js-jiaoyi-num" type="tel" placeholder="输入充值金额" />
         </div>
         <div class="cc-close js-cc-close">×</div>
         <div class="cc-ctrl">
@@ -114,7 +57,7 @@
         <div class="cc-title">提现</div>
         <div class="cc-form">
             <div class="ccc-value hide">可卖出<span class="js-jb-show"></span></div>
-            <input class="ccf-input js-jiaoyi-num" type="tel" placeholder="输入提现金额" />
+            <input class="ccf-input js-jiaoyi-num2" type="tel" placeholder="输入提现金额" />
         </div>
         <div class="cc-close js-cc-close">×</div>
         <div class="cc-ctrl">
@@ -126,54 +69,6 @@
     
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script src="./js/wallet.js"></script>
-    <script>    
-        $(function(){
-            var app = {
-                buyNum: 1, /* 购买数量*/
-                init: function(){
-                    this.bindEvent();
-                },
-                bindEvent: function(){
-                    var self = this;
-                    /**  充值弹窗*/
-                    $('.js-cz-bt').on('click', function(){
-                        $('.js-cz-window').removeClass('hide');
-                    })
-                    /**  提现弹窗*/
-                    $('.js-tx-bt').on('click', function(){
-                        $('.js-tx-window').removeClass('hide');
-                    })
-
-                    /** 数量类型选择*/
-                    $('.js-room-choose').on('click','.twn-choose', function(){
-                        $('.js-room-choose > .selected').removeClass('selected');
-                        $(this).addClass('selected')
-                    })
-
-                    /** 马上充值点击*/
-                    $('.js-cz-now').on('click', function(){
-                        $('.js-cz-window').addClass('hide');
-                    })
-
-                    /** 马上提现点击*/
-                    $('.js-tx-now').on('click', function(){
-                        $('.js-tx-window').addClass('hide');
-                    })
-
-                    /** 通用弹窗关闭*/
-                    $('.toast-window-mask').on('click', function(){
-                        $(this).parent('.toast-window').addClass('hide');
-                    })
-                    /** 通用弹窗关闭*/
-                    $('.twn-t-close, .js-win-close').on('click', function(){
-                        $(this).parents('.toast-window').addClass('hide');
-                    })
-                    
-                }
-            }
-            app.init();
-        })
-    </script>
     
 </body>
 
