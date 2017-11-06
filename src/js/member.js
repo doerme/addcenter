@@ -63,17 +63,17 @@ var app = {
 
         // 去粉丝列表
         $('.js-to-fans').on('click', function(){
-            window.location.href='fans.html';
+            window.location.href='./fans.html';
         })
 
         // 去钱包
         $('.js-to-wallet').on('click', function(){
-            window.location.href='wallet.html';
+            window.location.href='./wallet.html';
         })
 
         // 去积分
         $('.js-to-jifen').on('click', function(){
-            window.location.href='intergral.html';
+            window.location.href='./intergral.html';
         })
     }
 
