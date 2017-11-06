@@ -16,9 +16,9 @@
 
 <body>
     <div class="wallet-wrap">
-        <img class="page-cover" src="./img/page/checkcode-eg.png" />
+        <img class="page-cover js-page-cover" src="./img/page/checkcode-eg.png" />
         <div class="page-note">我的余额</div>
-        <div class="page-price">￥55</div>
+        <div class="page-price js-page-price">￥--</div>
         <a class="bt-left yellow js-cz-bt" href="javascript:;">充值</a>
         <a class="bt-right js-tx-bt" href="javascript:;">提现</a>
         <div class="wallet-list-top">
@@ -94,54 +94,36 @@
             <li  class="cur"><a href="wallet.html">钱包</a></li>
         </ul>
     </div>
-
     <!-- 提示弹窗 -->
-    <!-- 充值弹窗 -->
-    <div class="toast-window js-cz-window hide">
-        <div class="toast-window-mask"></div>
-        <div class="toast-window-main">
-            <div class="twm-title">
-                <div class="twn-t-close"></div>
-                充值
-            </div>
-            <div class="twm-main">
-                <div class="twn-m-body min js-room-choose">
-                    <div data-num="10" class="twn-choose selected">10</div>
-                    <div data-num="30" class="twn-choose">30</div>
-                    <div data-num="50" class="twn-choose">50</div>
-                    <div data-num="100" class="twn-choose">100</div>
-                    <div data-num="200" class="twn-choose">200</div>
-                    <div data-num="500" class="twn-choose">500</div>
-                </div>
-                
-            </div>
-            <a class="twm-main-bt js-cz-now" href="javascript:;">确认</a>
+
+    <!-- in out window -->
+    <div class="jhm-wrap common-client-wrap js-chongzhi-center hide">
+        <div class="cc-title">充值</div>
+        <div class="cc-form">
+            <div class="ccc-value hide">可卖出<span class="js-jb-show"></span></div>
+            <input class="ccf-input js-jiaoyi-num" type="tel" placeholder="输入提现金额" />
         </div>
-    </div>
-    <!-- 提现弹窗 -->
-    <div class="toast-window js-tx-window hide">
-        <div class="toast-window-mask"></div>
-        <div class="toast-window-main">
-            <div class="twm-title">
-                <div class="twn-t-close"></div>
-                提现
-            </div>
-            <div class="twm-main">
-                <div class="twn-m-body min js-room-choose">
-                    <div data-num="10" class="twn-choose selected">10</div>
-                    <div data-num="30" class="twn-choose">30</div>
-                    <div data-num="50" class="twn-choose">50</div>
-                    <div data-num="100" class="twn-choose">100</div>
-                    <div data-num="200" class="twn-choose">200</div>
-                    <div data-num="500" class="twn-choose">500</div>
-                </div>
-                
-            </div>
-            <a class="twm-main-bt js-tx-now" href="javascript:;">确认</a>
+        <div class="cc-close js-cc-close">×</div>
+        <div class="cc-ctrl">
+            <div class="ccc-in js-chongzhi-num">确定充值</div>
+            <!-- <div class="ccc-out js-jiaoyi-numout">卖出</div> -->
         </div>
     </div>
 
-    <!-- 提示弹窗end -->
+    <div class="jhm-wrap common-client-wrap js-tixian-center hide">
+        <div class="cc-title">提现</div>
+        <div class="cc-form">
+            <div class="ccc-value hide">可卖出<span class="js-jb-show"></span></div>
+            <input class="ccf-input js-jiaoyi-num" type="tel" placeholder="输入提现金额" />
+        </div>
+        <div class="cc-close js-cc-close">×</div>
+        <div class="cc-ctrl">
+            <div class="ccc-in js-tixian-num">确定提现</div>
+            <!-- <div class="ccc-out js-jiaoyi-numout">卖出</div> -->
+        </div>
+    </div>
+    <!-- in out window end -->
+    
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script src="./js/wallet.js"></script>
     <script>    

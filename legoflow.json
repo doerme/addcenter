@@ -19,11 +19,9 @@
     "output": "",
     "shell": "",
     "alias": {
-        "$": "./src/assets/zepto.min.js",
         "zepto": "./src/assets/zepto.min.js"
     },
     "global": {
-        "$": "zepto",
         "zepto": "zepto"
     },
     "externals": {},

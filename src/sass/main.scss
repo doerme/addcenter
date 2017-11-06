@@ -7,6 +7,7 @@ $font_size : 75;
 }
 
 @import "base/base";
+@import "base/window";
 @import "img";
 
 body {
@@ -171,7 +172,7 @@ body {
             margin-top: rem(35);
         }
         .lb{
-            font-size: rem(72);
+            font-size: rem(68);
             color: #e6e0dc;
         }
         .left{
@@ -231,6 +232,10 @@ body {
     height: 100%;
     padding: rem(60);
     background: #24201d;
+    &.fans404{
+        background: #2e2a27 url('../img/page/fans404.png') no-repeat center center;
+        background-size: rem(122) rem(170); 
+    }
 }
 .formwrap{
     position: relative;
@@ -331,7 +336,7 @@ body {
             }
         }
         .count {
-            span {
+            span, a {
                 color: #fff;
                 font-size: rem(36);
                 margin-right: rem(18);
@@ -414,7 +419,7 @@ body {
         line-height: rem(90);
         font-size: rem(32);
         color: #fff;
-        border-radius: rem(20);
+        border-radius: rem(60);
     }
     .bt-right{
         position: absolute;
@@ -424,8 +429,8 @@ body {
         top: rem(325);
         right: rem(30);
         background: #383431;
-        border: rem(2) solid #cccccc;
-        border-radius: rem(20);
+        border: rem(2) solid #999;
+        border-radius: rem(60);
         text-align: center;
         line-height: rem(90);
         font-size: rem(32);
