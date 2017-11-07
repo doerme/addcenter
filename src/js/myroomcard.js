@@ -66,6 +66,7 @@ var app = {
                     self.curpage = 1;
                     $('.js-card-list').html('');
                     self.getList();
+                    self.getUserInfo();
                 }
             })
         })
