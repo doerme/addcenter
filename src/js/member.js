@@ -28,7 +28,7 @@ var app = {
                 });
                 $('.js-identifier').html(jdata.data.mid);
                 $('.js-nickname').html(jdata.data.nickname);
-                $('.js-jf-num').html(jdata.data.exchangeJF);
+                $('.js-jf-num').html(jdata.data.JF);
                 $('.js-fans-num').html(jdata.data.fans);
                 $('.js-jb-num').html(jdata.data.JB);
                 $('.js-room-count').html(jdata.data.RC*1);
