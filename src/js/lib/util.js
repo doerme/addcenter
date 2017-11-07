@@ -1,7 +1,7 @@
 import LegoToast from '../legolib/lego-toast/0.0.1/legoToast.min.js';
 import wechatShare from './wechatShare.js';
 export default {
-    apiHost: /com/.test(window.location.href) ? '' : 'http://testddz.tcpan.com',
+    apiHost: /com/.test(window.location.href) ? '' : 'http://www.xinkzw.com', // http://testddz.tcpan.com
     legoToast: new LegoToast({
         msg        : "操作成功",
         time       : 1200,
