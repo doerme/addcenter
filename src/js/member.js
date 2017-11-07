@@ -12,13 +12,15 @@ var app = {
     },
     /** refresh weichat */
     refreshWechat: function(){
-        window.location.href = `${/com/.test(window.location.href) ? 'http://gfun.yunshantec.com' : 'http://testddz.tcpan.com'}/app/user/refresh`;
+        var self = this;
+        window.location.href = `${/com/.test(window.location.href) ? '' : 'http://testddz.tcpan.com'}/app/user/refresh`;
         // util.ajaxFun('/app/user/refresh',{}).done((jdata)=>{
 
         // })
     },
     /** 获取图形验证码 */
     getUserInfo: function(){
+        var self = this;
         util.ajaxFun('/app/user/userInfo',{}).done(function(jdata){            
             if(jdata.code == 0){
                 $('.js-avatar').attr({
@@ -58,22 +60,22 @@ var app = {
 
         // 去二维码
         $('.js-to-qrcode').on('click', function(){
-            window.location.href='http://testddz.tcpan.com/app/cqrcode?mid=' + self.mid;
+            window.location.href='/app/cqrcode?mid=' + self.mid;
         })
 
         // 去粉丝列表
         $('.js-to-fans').on('click', function(){
-            window.location.href='//gfun.yunshantec.com/app/user/fans';
+            window.location.href='//www.xinkzw.com/app/user/fans';
         })
 
         // 去钱包
         $('.js-to-wallet').on('click', function(){
-            window.location.href='//gfun.yunshantec.com/app/user/wallet';
+            window.location.href='//www.xinkzw.com/app/user/wallet';
         })
 
         // 去积分
         $('.js-to-jifen').on('click', function(){
-            window.location.href='//gfun.yunshantec.com/app/user/intergral';
+            window.location.href='//www.xinkzw.com/app/user/intergral';
         })
     }
 
