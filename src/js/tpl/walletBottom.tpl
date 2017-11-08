@@ -7,9 +7,9 @@
         </div>
         <span class="col2">{{v.je}}</span>
         {{if v.state == '已完成'}}
-            <span class="col4 done">已完成</span>
+            <span class="col4 done">{{v.state}}</span>
         {{else}}
-            <span class="col4 wait">已完成</span>
+            <span class="col4 wait">{{v.state}}</span>
         {{/if}}
         
     </li>

@@ -274,6 +274,9 @@ body {
     height: 100%;
     padding: rem(60);
     background: #24201d;
+    &.half{
+        padding: rem(30);
+    }
     &.fans404{
         background: #2e2a27 url('../img/page/fans404.png') no-repeat center center;
         background-size: rem(122) rem(170); 
