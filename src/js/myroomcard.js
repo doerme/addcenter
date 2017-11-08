@@ -24,7 +24,7 @@ var app = {
         var self = this;
         util.ajaxFun('/app/user/userInfo',{}).done(function(jdata){            
             if(jdata.code == 0){
-                $('.js-fk').html(jdata.data.RC_TOTAL);
+                $('.js-fk').html(jdata.data.RC);
                 $('.js-fk-jh').html(jdata.data.RC_JH);
             }
         })

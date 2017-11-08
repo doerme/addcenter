@@ -121,6 +121,9 @@ var app = {
             }
             if(tmpval > 0){
                 tmpval-=10;
+                if(tmpval < 0){
+                    tmpval = 0; 
+                }
                 $('.js-buynum').val(tmpval);
             }
         })

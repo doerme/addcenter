@@ -31,7 +31,8 @@ var app = {
                 $('.js-jf-num').html(jdata.data.JF);
                 $('.js-fans-num').html(jdata.data.fans);
                 $('.js-jb-num').html(jdata.data.JB);
-                $('.js-room-count').html(jdata.data.RC*1);
+                $('.js-room-count').html(jdata.data.RC_TOTAL);
+                $('.js-vip').html(jdata.data.vip);
                 self.mid = jdata.data.mid;
             }
         })

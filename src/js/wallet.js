@@ -47,6 +47,7 @@ var app = {
             }).done((jdata)=>{
                 if(jdata.code == 0){
                     window.location.href = jdata.data.pay_url;
+                    
                 }
             })
         })
@@ -59,12 +60,18 @@ var app = {
         });
 
         $('.js-tixian-num').on('click', function(){
+            if(isNaN($('.js-jiaoyi-num2').val()) || $('.js-jiaoyi-num2').val()*1 < 1){
+                util.windowToast('请输入正确数量');
+                return;
+            }
             util.ajaxPost('/app/user/apply_cash',{
                 jb: $('.js-jiaoyi-num2').val()
             }).done((jdata)=>{
                 if(jdata.code == 0){
                     util.windowToast(jdata.msg);
                     $('.js-tixian-center').addClass('hide');
+                    self.getUserInfo();
+                    self.getLogList();
                 }
             })
         })
