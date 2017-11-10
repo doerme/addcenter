@@ -55,10 +55,20 @@ var app = {
             $('.js-jihuo-center').removeClass('hide');
         })
 
+        // 房卡模式
+        $('.js-jihuo-center .cc-title-left').on('click', function(){
+            $('.js-jihuo-center .cc-title').removeClass('right');
+        });
+
+        $('.js-jihuo-center .cc-title-right').on('click', function(){
+            $('.js-jihuo-center .cc-title').addClass('right');
+        });
+
         // 激活房卡
         $('.js-jihuo-now').on('click', function(){
             util.ajaxPost('/app/user/exchangeRC',{
-                count: $('.js-jihuo-input').val()
+                count: $('.js-jihuo-input').val(),
+                type: $('.js-jihuo-center .cc-title').hasClass('right') ? '2' : '1'
             }).done((jdata)=>{
                 if(jdata.code == 0){
                     util.windowToast(jdata.msg);

@@ -6,8 +6,9 @@ $font_size : 75;
     @return $pixels / $font_size + rem;
 }
 
-@import "base/base";
 @import "base/window";
+@import "base/base";
+
 @import "img";
 
 body {
@@ -290,6 +291,10 @@ body {
     height: 100%;
     padding: rem(60);
     background: #24201d;
+    &.c404{
+        background: url('../img/page/msg404.png') no-repeat center center;
+        background-size: rem(135) rem(180); 
+    }
     &.half{
         padding: rem(30);
     }
@@ -377,6 +382,13 @@ body {
                 color: #FFF;
                 margin-left: rem(20);
             }
+            .fanslevel{
+                display: inline-block;
+                width: rem(88);
+                height: rem(29);
+                vertical-align: middle;
+                margin-left: rem(10);
+            }
         }
     }
 }
@@ -408,7 +420,7 @@ body {
             }
             .pay-state{
                 display: inline-block;
-                width: rem(110);
+                width: rem(140);
                 height: rem(45);
                 text-align: center;
                 line-height: rem(45);
@@ -944,6 +956,7 @@ body {
     top: 5%;
     background: #24201d;
     overflow-y: auto;
+    border: 1px solid #666;
     &-time{
         height: rem(150);
         line-height: rem(150);

@@ -33,7 +33,7 @@ var app = {
         var self = this;
         $('.js-lijizhuanchu').on('click', function(){
             util.ajaxFun('/app/user/exchangeJF',{}).done((jdata)=>{
-
+                self.getList();
             })
         })
     }

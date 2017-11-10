@@ -29,7 +29,7 @@ var app = {
                     data: jdata.data.list
                 }));
                 if(jdata.data.list.length > 0){
-                    $('.js-img-list').removeClass('c404');
+                    $('.pagewrap').removeClass('c404');
                 }
                 if(self.curpage < jdata.data.page_count){
                     self.curpage = self.curpage * 1 + 1;

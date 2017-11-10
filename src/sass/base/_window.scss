@@ -10,9 +10,38 @@
     border-radius: rem(10);
     z-index: 11;
     -webkit-animation: bounceInDown 1s ease both;
-	animation: bounceInDown 1s ease both;
+    animation: bounceInDown 1s ease both;
+    &.jhm-wrap-pay{
+        height: rem(430);
+    }
     &.jhm-wrap{
-        height: rem(420);
+        height: rem(480);
+        width: rem(650);
+        margin-left: rem(-325);
+        .cc-title{
+            width: 100%;
+            height: rem(183);
+            background: url('../img/page/window-top/nav1.png') no-repeat;
+            background-size: 100% auto;
+            &.right{
+                background: url('../img/page/window-top/nav2.png') no-repeat;
+                background-size: 100% auto;
+            }
+            &-left{
+                position: absolute;
+                width: 50%;
+                height: 100%;
+                left: 0;
+                top: 0;
+            }
+            &-right{
+                position: absolute;
+                width: 50%;
+                height: 100%;
+                right: 0;
+                top: 0;
+            }
+        }
     }
     &.phonebind{
         height: rem(520);
@@ -269,14 +298,14 @@
         }
         .ccc-in{
             display: inline-block;
-            width: rem(260);
-            height: rem(70);
+            width: rem(340);
+            height: rem(88);
             text-align: center;
-            line-height: rem(70);
+            line-height: rem(88);
             font-size: rem(30);
             color: #FFF;
-            background: #ff7200;
-            border-radius: rem(30);
+            background: url('../img/page/window-top/window-main-bt.png') no-repeat;
+            background-size: 100% auto;
         }
     }
 }
