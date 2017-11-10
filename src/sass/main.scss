@@ -719,16 +719,16 @@ body {
         }
       }   
       .nickname {
-        font-size: rem(48);
+        font-size: rem(43);
         font-weight: 500;
-        line-height: rem(108);
+        line-height: rem(80);
         position: relative;
         color: #fff;
         &:after {
           position: absolute;
           display: inline-block;
           width: rem(78);
-          height: rem(108);
+          height: rem(80);
           background: url('../img/page/phone-icon.png') no-repeat center;
           background-size: rem(38) rem(40);
         }

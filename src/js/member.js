@@ -59,6 +59,12 @@ var app = {
         //     window.location.href='roomcard.html';
         // })
 
+        $('.tabbar > a').on('click', function(){
+            if($(this).data('href')){
+                window.location.href = '/app/user/iframe?ifuri='+ encodeURIComponent($(this).data('href'));
+            }
+        })
+
         // 去二维码
         $('.js-to-qrcode').on('click', function(){
             window.location.href='/app/cqrcode?mid=' + self.mid;
